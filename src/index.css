@@ -1,0 +1,445 @@
+*{
+  font-family: 'Press Start 2P';
+  margin: 0;
+padding: 0;
+}
+
+
+
+/* NAVBAR */
+.navbar {
+display: flex;
+position: sticky;
+justify-content: space-between;
+align-items: center;
+background-color: #333;
+color: white;
+top: 0px;
+z-index: 9;
+
+
+}
+.bar{
+  width: 50%;
+}
+.brand-title {
+font-size: 1.5rem;
+margin: .5rem;
+white-space: nowrap;
+}
+
+
+
+.navbar-links {
+height: 100%;
+left: 50%;
+
+}
+
+.navbar-links ul {
+display: flex;
+float: right;
+margin: 0;
+padding: 0;
+}
+
+.navbar-links li {
+list-style: none;
+float: right;
+}
+
+.navbar-links li a {
+display: block;
+text-decoration: none;
+color: white;
+padding: 1rem;
+}
+
+.navbar-links li:hover {
+background-color: #555;
+}
+
+.toggle-button {
+position: absolute;
+top: .75rem;
+right: 1rem;
+display: none;
+flex-direction: column;
+justify-content: space-between;
+width: 30px;
+height: 21px;
+}
+
+.toggle-button .bar {
+height: 3px;
+width: 100%;
+background-color: white;
+border-radius: 10px;
+}
+
+.saitama{
+  width: 12%;
+}
+
+/* WORK  */
+.lists div{
+display: flex;
+align-items: center;
+padding-top: 10px;
+text-indent: 10px;
+font-size: 15px;
+white-space: nowrap;
+}
+
+.education{
+vertical-align: middle;
+}
+
+/* GRID */
+.grid-container {
+display: grid;
+gap: 1.5rem;
+grid-template-columns: 500px 500px;
+grid-auto-rows: minmax(150px, auto);
+padding: 16px;
+margin-top: 0px;
+justify-content: center;
+align-content: center;
+
+}
+
+.grid1{
+grid-column: 1/3;
+grid-row: 1/3;
+/* background-image: url(https://images.hdqwalls.com/download/8-bit-city-m2-2048x1152.jpg); */
+background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/01073865290819.5d61d475f0072.jpg);
+height: 100%;
+border-radius: 5px;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+border: black 5px solid;
+
+
+}
+
+.grid2{
+grid-row: 3/5;
+
+}
+
+
+
+.grid5{
+grid-column: 1/3;
+grid-row: 5/7;
+
+}
+.grid6{
+grid-column: 1/3;
+grid-row: 7/9;
+
+
+}
+
+
+
+.grid6a{
+display: flex;
+
+}
+
+
+
+.projectimage1,.projectimage2{
+
+display: flex;
+margin-left: auto;
+margin-right: auto;
+
+width: 30%;
+-webkit-transform: scale(1);
+transform: scale(1);
+-webkit-transition: .3s ease-in-out;
+transition: .3s ease-in-out;
+}
+
+
+
+.projectimage1:hover,.projectimage2:hover{
+transform: scale(1.3);
+}
+
+.grid7{
+grid-column: 1/3;
+grid-row: 9/12;
+display: grid;
+gap: 20px;
+grid-template-columns: 1fr 1fr;
+grid-template-areas:
+'header header'
+'name email'
+'message message'
+'button button';
+}
+.grid70{
+grid-area: header;
+
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.grid7a{
+grid-area: name;
+}
+.grid7b{
+grid-area: email;
+}
+.grid7c{
+grid-area: message;
+}
+.grid7button{
+grid-area: button;
+}
+
+
+.inputs{
+text-align: left;
+}
+
+.hello{
+overflow: hidden;
+display: inline-block;
+font-weight: normal; 
+font-size: 20px;
+padding: 8px;
+
+}
+
+.Rimage{
+margin-top: auto;
+margin-bottom: auto;
+width: 12%;
+animation: MoveUpDown 2s linear infinite;
+
+}
+
+@keyframes MoveUpDown {
+0%, 100% {
+transform: translateY(0);
+}
+50% {
+transform: translateY(-5px);
+}
+}
+
+
+
+
+
+.imagecomputer{
+      width:500px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border: black solid 5px;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+     -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+}
+
+.imagecomputer:hover {
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+
+[data-tooltip] {
+position: relative;
+z-index: 2;
+
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+visibility: hidden;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+opacity: 0;
+pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+position: absolute;
+bottom: -40%;
+left: 20%;
+margin-bottom: 5px;
+margin-left: -40px;
+padding: 5px;
+width: 400px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+background-color: #fff;
+background-color: hsla(0, 100%, 100%, 0.9);
+color: #000;
+content: attr(data-tooltip);
+text-align: center;
+font-size: 12px;
+line-height: 1.2;
+z-index: 3;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+position: absolute;
+bottom: 150%;
+left: 50%;
+margin-left: -5px;
+width: 0;
+border-top: 5px solid #000;
+border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+border-right: 5px solid transparent;
+border-left: 5px solid transparent;
+content: " ";
+font-size: 0;
+line-height: 0;
+
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+visibility: visible;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+opacity: 1;
+
+}
+
+/* SKILLS */
+#skills div{
+display: flex;
+justify-content: space-between;
+margin-top: 10px;
+align-items: center;
+}
+
+.educ1,.educ2{
+font-size: 14px;
+text-align: center;
+}
+
+@media only screen and (max-width: 550px) {
+.navbar {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.toggle-button {
+  display: flex;
+}
+
+.navbar-links {
+  display: none;
+  width: 100%;
+}
+
+.navbar-links ul {
+  width: 100%;
+  flex-direction: column;
+}
+
+.navbar-links ul li {
+  text-align: center;
+}
+
+.navbar-links ul li a {
+  padding: .5rem 1rem;
+}
+
+.navbar-links.active {
+  display: flex;
+}
+
+.grid-container{
+  grid-gap: 10px;
+grid-template-columns: 400px;
+}
+
+.grid1{
+  
+  grid-row: 1/1;
+  grid-column: 1/2;
+}
+
+.grid2{
+  grid-column: 1/2;
+  grid-row: 2/3;
+  place-items:  center;
+}
+
+.grid3{
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.grid4{
+  grid-column: 1/2;
+  grid-row: 4/5;
+  margin: 0px;
+}
+
+.grid5{
+  grid-column: 1/2;
+  grid-row: 5/6;
+}
+
+.grid6{
+  grid-column: 1/2;
+  grid-row: 6/7;
+}
+
+.grid7{
+  grid-column: 1/2;
+  grid-row: 7/8;
+}
+
+body{
+  font-size: 12px;
+}
+
+.lists div{
+  font-size: 11px;
+}
+
+
+.hello{
+  
+  
+  font-size: 9px;
+}
+
+.hellobaloon{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.imagecomputer{
+  width:400px;
+}
+.educ1,.educ2{
+  font-size: 10px;
+}
+
+
+}
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 10px;
+    text-align: center;
+}
